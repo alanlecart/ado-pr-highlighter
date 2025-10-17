@@ -30,7 +30,7 @@ function loadDefaultHosts() {
 
 async function loadCustomHosts() {
   const { customHosts = [] } = await chrome.storage.sync.get('customHosts');
-  hostsList.innerHTML = ''; // Clear the list before populating
+  hostsList.innerHTML = '';
   customHosts.forEach(createCustomHostListItem);
 }
 
